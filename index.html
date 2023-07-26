@@ -16,6 +16,33 @@
     html {
       font-size: 62.5%; /* 62.5% of the default font size */
     }
+    .tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 140px;
+  background-color:#cbd5e1;
+  color: rgb(87, 86, 86);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  /* bottom: 125%; */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
   </style>
 </head>
 
@@ -31,13 +58,20 @@
     </div>
     <div class="flex justify-between mt-7">
       <div class="flex gap-3 items-center ml-16">
-        <img class="h-9 w-9 " src="./question.svg" alt="question mark">
+        <div class="tooltip">
+          <img class="h-9 w-9" src="./question.svg" alt="question mark">
+          <span class="tooltip-text">How can I help</span>
+        </div>
         <p class="text-slate-500 text-xl">Some HTML is OK.</p>
       </div>
-      
-      <button class=" pr-5 pl-5 pt-2 pb-2 rounded-md text-slate-500 text-xl font-semibold border-2 border-slate-400">Post Comment</button>
+    
+      <button
+        class="pr-5 pl-5 pt-2 pb-2 rounded-md text-slate-500 text-xl font-semibold border-2 border-slate-400 hover:bg-slate-400 hover:text-white focus:outline-none focus:ring focus:border-slate-400 transition-colors duration-200 ease-in-out">
+        Post Comment
+      </button>
     </div>
-  </div>
+    
+    
 
   <script type="module" src="/main.js"></script>
 </body>
