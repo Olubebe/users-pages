@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="/dist/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/29a6b426db.js" crossorigin="anonymous"></script>
+  <title>Vite App</title>
+</head>
+
+<body class="bg-slate-200 flex items-center justify-center h-screen w-full">
+  <div class="bg-white w-full max-w-2xl p-10 rounded-lg shadow-xl">
+    <h2 class="font-medium text-slate-700 text-2xl mb-6 ">Add a new comment</h2>
+    <div class="flex gap-5 ">
+      <img class="object-cover w-12 h-12 rounded-md"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeE_tojVexofy-5PJ_1U9_fX349l1brkDfpQ&usqp=CAU"
+        alt="profile picture">
+      <textarea name="comment" id="comment" class="bg-slate-100 rounded-lg ml-2 border-b w-full p-3 " placeholder="Type your message..."
+        cols="30" rows="3"></textarea>
+    </div>
+    <div class="flex justify-between mt-5">
+      <div class="flex gap-3 items-center ml-16">
+        <img class="h-9 w-9 " src="./question.svg" alt="question mark">
+        <p class="text-slate-500 text-xl">Some HTML is OK.</p>
+      </div>
+      
+      <button class=" pr-5 pl-5 rounded-md text-slate-500 font-semibold border-2 border-slate-400">Post Comment</button>
+    </div>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
